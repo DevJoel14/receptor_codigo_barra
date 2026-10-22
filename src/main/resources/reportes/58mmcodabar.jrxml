@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.3.final using JasperReports Library version 6.21.3-4a3078d20785ebe464f18037d738d12fc98c13cf  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="80mm" pageWidth="130" pageHeight="141" columnWidth="126" leftMargin="2" rightMargin="2" topMargin="2" bottomMargin="2" isIgnorePagination="true" uuid="1b6a9b4b-bcf4-41cb-b731-b5f98ca2b94b">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="sqliteCodebar"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="producto" class="java.lang.String"/>
+	<parameter name="codigo" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from codigo_barras]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id"/>
+		<property name="com.jaspersoft.studio.field.label" value="id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="codigo_barras"/>
+	</field>
+	<field name="codigo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="codigo"/>
+		<property name="com.jaspersoft.studio.field.label" value="codigo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="codigo_barras"/>
+	</field>
+	<field name="tipo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.label" value="tipo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="codigo_barras"/>
+	</field>
+	<field name="ancho_mm" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="ancho_mm"/>
+		<property name="com.jaspersoft.studio.field.label" value="ancho_mm"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="codigo_barras"/>
+	</field>
+	<field name="alto_mm" class="java.lang.Object">
+		<property name="com.jaspersoft.studio.field.name" value="alto_mm"/>
+		<property name="com.jaspersoft.studio.field.label" value="alto_mm"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="codigo_barras"/>
+	</field>
+	<field name="producto" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="producto"/>
+		<property name="com.jaspersoft.studio.field.label" value="producto"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="codigo_barras"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="100" splitType="Stretch">
+			<componentElement>
+				<reportElement x="1" y="40" width="122" height="60" uuid="a500cdf6-c0e3-4af7-8ada-0a23bd926c4a">
+					<property name="com.jaspersoft.studio.unit.barHeight" value="px"/>
+					<property name="com.jaspersoft.studio.unit.barWidth" value="px"/>
+				</reportElement>
+				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Codabar" drawText="true" checksumRequired="false" barHeight="80">
+					<jr:codeExpression><![CDATA[$P{codigo}]]></jr:codeExpression>
+				</jr:barbecue>
+			</componentElement>
+			<textField>
+				<reportElement x="1" y="20" width="122" height="20" uuid="b8e61c3a-5fa9-41bc-853c-27b3b0df9bf5"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{producto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+</jasperReport>

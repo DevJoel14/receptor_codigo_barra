@@ -1,0 +1,48 @@
+.root {
+    -fx-font-family: "Arial";
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-background-color: #D2B48C;
+    -fx-border-style: dashed;
+}
+
+/* Cambiar color del foco en general */
+*:focused {
+    -fx-focus-color: #8B4513; /* Café */
+    -fx-faint-focus-color: #8B451322; /* Café translúcido */
+}
+
+/* Hover sobre fila de la tabla */
+.table-row-cell:hover {
+    -fx-background-color: #D2B48C; /* Café claro (tan) */
+}
+
+/* Fila seleccionada en la tabla */
+.table-row-cell:filled:selected {
+    -fx-background-color: #A0522D; /* Café más oscuro */
+    -fx-text-fill: white;
+}
+
+/* Evita parpadeo al hacer hover sobre selección */
+.table-row-cell:filled:hover:selected {
+    -fx-background-color: #A0522D;
+}
+
+/* Estilo del encabezado de tabla */
+.table-view .column-header-background {
+    -fx-background-color: #f0e6d2;
+}
+.table-view .column-header {
+    -fx-border-color: transparent;
+}
+/* Fondo para TextField */
+.text-field {
+    -fx-background-color: #f0e6d2;
+}
+
+/* Hover en celdas */
+.table-row-cell:hover {
+    -fx-background-color: #d2b48c; /* café más claro */
+}
+
+
